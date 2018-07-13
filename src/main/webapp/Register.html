@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register here</title>
+</head>
+
+<body style="background-image:url('BG-1.jpg')">
+<h1>Welcome,this is Login page 4</h1>
+
+
+
+   <form action = '/hello' method='Post' name = 'myForm' onsubmit='return validateForm()'>
+   <table align='center'><tr><td> Name </td><td><input name='user'  type='text' id = "USER"></td></tr>
+    <tr><td>Password</td><td><input name='password' type='Password'  ></td></tr>
+    <tr><td>Age</td><td><input name='age' type='text'  ></td></tr>
+    
+    <tr><td>ID</td><td><input name='id'  type ='text'  id = 'USER_ID' ></td></tr>
+    <tr><td><input value='Submit' type ='submit' ></td></tr></table></form>
+   <!--  <p id = "display">DISPLAY HERE</p> -->
+    <!--  validation -->
+    <script type="text/javascript">
+      /*function myFunction(){
+    	  var y = document.forms["myForm"]["age"].value;
+          if (y < 18) {
+              alert("Not a validAge");
+              return false;
+          }
+      }*/
+      
+    function validateForm() {
+        var x = document.forms["myForm"]["user"].value;
+        if (x == '') {
+            alert("Name must be filled out");
+            return false;
+        }
+        var y = document.forms["myForm"]["age"].value;
+        if (y < 18) {
+            alert("Not a validAge");
+            return false;
+        }
+        
+        var z = document.forms["myForm"]["id"].value;
+        if (z == '') {
+            alert("ID must be filled out");
+            return false;
+        }
+    }
+    
+    </script>
+    
+</body>
+</html>
